@@ -20,7 +20,6 @@ export const Content = styled.div`
 
   width: 100%;
   max-width: 700px;
-
 `;
 
 const appearFromLeft = keyframes`
@@ -32,8 +31,7 @@ const appearFromLeft = keyframes`
     opacity: 1;
     transform: translateX(0);
   }
-`
-
+`;
 
 export const AnimationContainer = styled.div`
   display: flex;
@@ -62,7 +60,7 @@ export const AnimationContainer = styled.div`
       transition: color 0.2s;
 
       &:hover {
-        color: ${shade(0.2, '#f4ede8')}
+        color: ${shade(0.2, '#f4ede8')};
       }
     }
   }
@@ -82,10 +80,10 @@ export const AnimationContainer = styled.div`
     }
 
     &:hover {
-        color: ${shade(0.2, '#ff9000')}
-      }
+      color: ${shade(0.2, '#ff9000')};
+    }
   }
-`
+`;
 
 export const Background = styled.div`
   flex: 1;

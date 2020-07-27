@@ -31,6 +31,7 @@
   "rules": {
     "prettier/prettier": "error",
     "react/prop-types": "off",
+    "@typescript-eslint/camelcase": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -39,6 +40,7 @@
       "extensions": [".tsx"]
     }],
     "no-unused-expressions": "off",
+    "import/no-duplicates": "off",
     "import/prefer-default-export": "off",
     "@typescript-eslint/explicit-function-return-type": [
       "error",
@@ -53,7 +55,7 @@
         "ts": "never",
         "tsx": "never"
       }
-    ],
+    ]
   },
   "settings": {
     "import/resolver": {

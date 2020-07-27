@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components';
-import { animated } from 'react-spring'
+import { animated } from 'react-spring';
+
 interface ContainerProps {
   type?: 'info' | 'error' | 'success';
-  hasDescription: boolean;
-  progressionBar?: boolean;
+  hasDescription: number;
+  progressionBar?: number;
 }
 
 const toastTypeVariations = {
-  info:  css`
+  info: css`
     background: #e6fffa;
     color: #3172b7;
   `,
@@ -19,7 +20,7 @@ const toastTypeVariations = {
     background: #fddede;
     color: #c53036;
   `,
-}
+};
 
 export const Container = styled(animated.div)<ContainerProps>`
   width: 360px;
@@ -28,11 +29,11 @@ export const Container = styled(animated.div)<ContainerProps>`
   position: relative;
   padding: 16px 30px 16px 16px;
   border-radius: 10px;
-  box-shadow: 2px 2px 8px rgba(0,0,0, .2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 
   display: flex;
 
-/*
+  /*
   &::before {
     content: '';
     background: #fff;
@@ -47,7 +48,6 @@ export const Container = styled(animated.div)<ContainerProps>`
     height: 10px;
     width: 100%;
   } */
-
 
   ${props => toastTypeVariations[props.type || 'info']}
 
@@ -65,7 +65,7 @@ export const Container = styled(animated.div)<ContainerProps>`
     p {
       margin-top: 4px;
       font-size: 14px;
-      opacity: .8;
+      opacity: 0.8;
       line-height: 20px;
     }
   }
@@ -74,17 +74,19 @@ export const Container = styled(animated.div)<ContainerProps>`
     position: absolute;
     right: 16px;
     top: 24px;
-    opacity: .6px;
+    opacity: 0.6px;
     background: transparent;
     border: none;
     color: inherit;
   }
 
-  ${props => !props.hasDescription && css`
-    align-items: center;
+  ${props =>
+    !props.hasDescription &&
+    css`
+      align-items: center;
 
-    svg {
-      margin-top: 0;
-    }
-  `}
-`
+      svg {
+        margin-top: 0;
+      }
+    `}
+`;
